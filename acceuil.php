@@ -37,15 +37,6 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
     <title>Document</title>
 </head>
 <body>
-    
-<table>
-    <thead>
-        <th>notes</th>
-        <th>Matieres</th>
-        <th>eleves</th>
-        <th></th>
-        <th>Actions</th>
-    </thead>
-    <tbody>
+   
 </body>
 </html>
