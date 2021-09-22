@@ -6,25 +6,8 @@ if(isset($_SESSION['sess_user_id']) && $_SESSION['sess_user_id'] != "") {
   echo '<h1>Bienvenue '.$_SESSION['sess_nom'].'</h1>';
   echo '<h4><a href="close.php">deconnexion</a></h4>';
 } else { 
-  header('location:index.php');
+  header('location:acceuil.php');
 }
-
-
-
-
-$sql = 'SELECT * FROM `notes`';
-
-
-
-
-$query = $db->prepare($sql);
-
-
-$query->execute();
-
-
-$result = $query->fetchAll(PDO::FETCH_ASSOC);
-
 
 ?>
 
@@ -40,11 +23,10 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
     
 <table>
     <thead>
-        <th>notes</th>
-        <th>Matieres</th>
-        <th>eleves</th>
-        <th></th>
-        <th>Actions</th>
+        <th href='create.php'>Saisir une note</th>
+        <th href='etudiants.php'>Etudiants</th>
+        <th href='matiere.php'>Matieres</th>
+        
     </thead>
     <tbody>
 </body>

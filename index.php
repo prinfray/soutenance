@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 
 require_once('connect.php');
 
@@ -17,11 +18,14 @@ if(isset($_POST['bouton_log'])) {
       $stmt->execute();
       $count = $stmt->rowCount();
       $row   = $stmt->fetch(PDO::FETCH_ASSOC);
+
       if($count =!empty($row)) {
         $_SESSION['sess_user_id']   = $row['id'];
         $_SESSION['sess_mail'] = $row['email'];
         $_SESSION['sess_nom'] = $row['nom'];
-       
+        header("Location: acceuil.php");
+       var_dump($row);
+
       } else {
         $msg = "Invalid email$email and mdp!";
       }
