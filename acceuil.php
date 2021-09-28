@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once('connect.php');
+require_once('actions/connect.php');
 
 if(isset($_SESSION['sess_user_id']) && $_SESSION['sess_user_id'] != "") {
   echo '<h1>Bienvenue '.$_SESSION['sess_nom'].'</h1>';
@@ -21,11 +21,10 @@ if(isset($_SESSION['sess_user_id']) && $_SESSION['sess_user_id'] != "") {
 </head>
 <body>
     
-<table>
-    <thead>
-        <th href='create.php'>Saisir une note</th>
-        <th href='etudiants.php'>Etudiants</th>
-        <th href='matiere.php'>Matieres</th>
+
+        <a href='notes.php'>Saisir une note</a>
+        <a href='etudiants.php'>Etudiants</a>
+        <a href='matiere.php'>Matieres</a>
         
     </thead>
     <tbody>
