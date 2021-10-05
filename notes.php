@@ -11,13 +11,13 @@ $resultM = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-$req_eleves = 'SELECT id_eleve FROM eleve_matiere WHERE id_matiere ="'.$resultM.'"  ';
+$req_eleves = 'SELECT * FROM eleves  ';
 $query = $db->prepare($req_eleves);
 $query->execute();
 $resultE = $query->fetchAll(PDO::FETCH_ASSOC);
-echo $resultE;
 
-?>
+
+?>  
 
 <h1>Saisie de notes </h1>
 <form method="post"> 
@@ -28,9 +28,9 @@ echo $resultE;
     <option>D</option>
 </select>
 <select id='matiere'>
-<?php  foreach ($resultC as $cours) 
+<?php  foreach ($resultM as $matiere_id) 
     {
-        $idM = $cours ['matiere_id'];
+        $idM = $matiere_id ['id_matiere'];
         $req_matieres = 'SELECT * FROM matiere WHERE id="'.$idM.'"';
         $query = $db->prepare($req_matieres);
         $query->execute();

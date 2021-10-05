@@ -24,8 +24,8 @@ if(isset($_SESSION['sess_user_id']) && $_SESSION['sess_user_id'] != "") {
     
 
         <a href='notes.php'>Saisir une note</a>
-        <a href='etudiants.php'>Etudiants</a>
-        <a href='matiere.php'>Matieres</a>
+        <a href='liste_etudiants.php'>Etudiants</a>
+        <a href='liste_matieres.php'>Matieres</a>
         
     </thead>
     <tbody>
