@@ -3,4 +3,4 @@
 session_start();
 require_once('actions/connect.php');
 
-$idE = 
+$req = 'SELECT * FROM eleves WHERE id ='.$_GET['id'];
