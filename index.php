@@ -11,7 +11,7 @@ if(isset($_POST['bouton_log'])) {
   $mdp = trim($_POST['mdp']);
   if($email != "" && $mdp != "") {
     try {
-      $log = "SELECT * from professeur WHERE email=:email AND mdp=:mdp";
+      $log = "SELECT * from profs WHERE email=:email AND mdp=:mdp";
       $stmt = $db->prepare($log);
       $stmt->bindParam('email', $email, PDO::PARAM_STR);
       $stmt->bindValue('mdp', $mdp, PDO::PARAM_STR);
