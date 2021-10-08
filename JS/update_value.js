@@ -24,7 +24,6 @@ function update_element(btn_validate,id_note,selector_note){
 }
 function envoidb(id_note, selector_note){
   note = document.querySelector(selector_note).value;
-  alert(note);
   
   // note = ("#note-"+id_note_modify+""); 
   window.location="../update.php?id="+id_note+"&note_to_update="+note; 
