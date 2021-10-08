@@ -2,7 +2,7 @@
 <?php
 session_start();
 
-require_once('actions/connect.php');
+require_once('connect.php');
 
 $msg = ""; 
 
@@ -27,7 +27,7 @@ if(isset($_POST['bouton_log'])) {
        var_dump($row);
 
       } else {
-        $msg = "Invalid email$email and mdp!";
+        $msg = "email et/ou mot de passe invalide ! ";
       }
     } catch (PDOException $e) {
       echo "Error : ".$e->getMessage();
@@ -56,12 +56,12 @@ if(isset($_POST['bouton_log'])) {
      <tr>
       <td>
         email:
-        <input type="text" name="email" id="email" value="" autocomplete="off" />
+        <input type="text" name="email" id="email" value=""  />
       </td>
      </tr>
      <tr>
       <td><label>mdp:</label>
-        <input type="mdp" name="mdp" id="mdp" value="" autocomplete="off" /></td>
+        <input type="mdp" name="mdp" id="mdp" value=""  /></td>
      </tr>
      <tr>
       <td>
